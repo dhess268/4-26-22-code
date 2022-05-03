@@ -55,3 +55,28 @@ function isVow(a){
     }
    return newArr
 }
+
+
+// returns hello name! with name 
+function hello(name) {
+  if(!name || name.length === 0){
+    return "Hello, World!"
+  }
+  else{
+    let nameArr = name.split('')
+    nameArr[0] = nameArr[0].toUpperCase()
+    for(let i = 1; i < name.length; i++){
+      nameArr[i] = nameArr[i].toLowerCase()
+      console.log(nameArr[i])
+    }
+    let newName = nameArr.join('')
+    return `Hello, ${newName}!`;
+  }
+
+}
+
+
+// better solution:
+
+const hello = s =>
+  `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
