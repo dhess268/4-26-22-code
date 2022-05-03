@@ -78,5 +78,18 @@ function hello(name) {
 
 // better solution:
 
-const hello = s =>
-  `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
+const hello = s =>`Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
+
+
+
+
+  function dutyFree(normPrice, discount, hol){
+    let discounted = normPrice * (discount / 100)
+    let div = hol / discounted
+    
+  //   if(hol % discounted){
+  //     div += 1
+  //   }
+    div = Math.floor(div)
+    return div
+  }
