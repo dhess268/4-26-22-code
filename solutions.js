@@ -102,3 +102,19 @@ const hello = s =>`Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) 
     return `${split[0][0]}.${split[1][0]}`.toUpperCase()
 
 }
+
+
+function noSpace(x){
+  return x.replace(/\s/g, "")
+}
+
+
+function fakeBin(x){
+  let strArr = x.split('')
+  
+  for(let i = 0; i < strArr.length; i++){
+    strArr[i] = Number(strArr[i]) >= 5 ? '1' : '0'
+  }
+  
+  return strArr.join('')
+}
