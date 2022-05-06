@@ -118,3 +118,8 @@ function fakeBin(x){
   
   return strArr.join('')
 }
+
+
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? 'small' : 'wide'
+}
