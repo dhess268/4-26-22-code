@@ -136,3 +136,10 @@ function well(x){
     return 'Publish!'
   }
 }
+
+
+function howMuchILoveYou(nbPetals) {
+  let sayings = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+  
+  return sayings[(nbPetals - 1) % 6]
+}
