@@ -129,7 +129,7 @@ function well(x){
   if(sorted.length === 0){
     return 'Fail!'
   }
-  else if(softed.length < 3){
+  else if(sorted.length > 2){
     return 'I smell a series!'
   }
   else{
