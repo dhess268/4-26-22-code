@@ -123,3 +123,16 @@ function fakeBin(x){
 function mouthSize(animal) {
   return animal.toLowerCase() === "alligator" ? 'small' : 'wide'
 }
+
+function well(x){
+  let sorted = x.filter(elem => elem === 'good')
+  if(sorted.length === 0){
+    return 'Fail!'
+  }
+  else if(softed.length < 3){
+    return 'I smell a series!'
+  }
+  else{
+    return 'Publish!'
+  }
+}
