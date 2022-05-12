@@ -217,3 +217,7 @@ function strCount(str, letter){
     return inc
   }, 0)
 }
+
+function enough(cap, on, wait) {
+  return on + wait < cap ? 0 : on + wait - cap
+}
