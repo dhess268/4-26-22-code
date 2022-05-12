@@ -208,3 +208,12 @@ switch(current){
 }
 
 
+function strCount(str, letter){  
+  let strArr = str.split('')
+  return strArr.reduce((inc, curr) => {
+    if(curr === letter){
+      inc++
+    }
+    return inc
+  }, 0)
+}
