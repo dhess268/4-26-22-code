@@ -221,3 +221,30 @@ function strCount(str, letter){
 function enough(cap, on, wait) {
   return on + wait < cap ? 0 : on + wait - cap
 }
+
+
+// string ladder katas - Kyu 6
+// finds the highest value word when value goes up as you get further in the alphabet. EX. a = 1, z = 26
+function high(x){
+  var a = 97;
+  var charArray = {};
+  for (var i = 0; i<26; i++)
+      charArray[String.fromCharCode(a + i)] = i + 1;
+
+  let strArr = x.split(' ')
+  let valueArr = []
+  for(let word of strArr){
+    let wordArr = word.split('')
+    let value = 0
+    for(let letter of wordArr){
+      value += charArray[letter]
+    }
+    valueArr.push(value)
+  }
+  let highestValue = valueArr.reduce((prev, curr) => {
+    return prev > curr ? prev : curr
+  })
+  
+  let highestIndex = valueArr.indexOf(highestValue)
+  return strArr[highestIndex]
+}
