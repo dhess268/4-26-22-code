@@ -260,3 +260,18 @@ String.prototype.toJadenCase = function () {
 function spEng(sentence){
   return sentence.toLowerCase().includes('english')
 }
+
+
+// literally counts vowels from a lowercase string only
+function getCount(str) {
+  let vowelsCount = 0;
+  for(let letter of str){
+    if(vowels.indexOf(letter) !== -1){
+      vowelsCount++
+    }
+  }
+  
+  return vowelsCount;
+}
+  
+let vowels = ['a', 'e', 'i', 'o', 'u']
