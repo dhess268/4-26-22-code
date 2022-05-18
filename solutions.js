@@ -275,3 +275,8 @@ function getCount(str) {
 }
   
 let vowels = ['a', 'e', 'i', 'o', 'u']
+
+
+function nthEven(n){
+  return 2 * (n - 1)
+}
