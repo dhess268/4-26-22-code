@@ -280,3 +280,9 @@ let vowels = ['a', 'e', 'i', 'o', 'u']
 function nthEven(n){
   return 2 * (n - 1)
 }
+
+
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+  
+}
