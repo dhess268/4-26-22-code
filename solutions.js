@@ -291,3 +291,18 @@ function capitalizeWord(word) {
 function sumStr(a,b) {
   return String(Number(a) + Number(b))
 }
+
+
+function incrementer(nums) { 
+  if(nums.length){
+    return nums.map((element, index) => {
+      element += index + 1
+      while(element > 9) {
+        element -= 10
+    }
+      return element
+    })
+    }
+    
+  return []
+}
