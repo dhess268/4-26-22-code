@@ -308,3 +308,8 @@ function incrementer(nums) {
 }
 
 const iceBrickVolume = (r, x, y) => 2 * r * r * (x - y);
+
+
+function hero(bullets, dragons){
+  return bullets / 2 >= dragons
+}
