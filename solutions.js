@@ -313,3 +313,12 @@ const iceBrickVolume = (r, x, y) => 2 * r * r * (x - y);
 function hero(bullets, dragons){
   return bullets / 2 >= dragons
 }
+
+
+const reverseSeq = n => {
+  let arr = []
+  for(let i = n; i > 0; i--){
+    arr.push(i)
+  }
+  return arr
+};
