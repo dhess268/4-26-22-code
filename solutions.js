@@ -330,3 +330,12 @@ function bingo(a) {
   return bingoArr.every(elem => bingoSet.has(elem)) ? "WIN" : "LOSE"
   
 }
+
+function minSum(arr) {
+  let sortedArr = (arr.sort((a, b) => a - b))
+  let total = 0
+  for(let i = 0; i < sortedArr.length / 2; i++){
+    total += sortedArr[i] * sortedArr[sortedArr.length - i - 1]
+  }
+  return total
+}
