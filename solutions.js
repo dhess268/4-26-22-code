@@ -322,3 +322,11 @@ const reverseSeq = n => {
   }
   return arr
 };
+
+function bingo(a) {
+  let bingoSet = new Set(a)
+  let bingoArr = [2, 9, 14, 7, 15]
+  
+  return bingoArr.every(elem => bingoSet.has(elem)) ? "WIN" : "LOSE"
+  
+}
