@@ -343,3 +343,7 @@ function minSum(arr) {
 function consecutive(arr, a, b) {
   return (arr.indexOf(a) + 1 === arr.indexOf(b) || arr.indexOf(b) + 1 === arr.indexOf(a))
 }
+
+function interest(P,r,n) {
+  return [P*(1 + r*n), P*Math.pow(1+r, n)].map(Math.round)
+}
