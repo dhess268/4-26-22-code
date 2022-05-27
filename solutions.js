@@ -347,3 +347,12 @@ function consecutive(arr, a, b) {
 function interest(P,r,n) {
   return [P*(1 + r*n), P*Math.pow(1+r, n)].map(Math.round)
 }
+
+
+function checkExam(array1, array2) {
+  let pointArray = array1.map((elem, index) => {
+    return elem === array2[index] ? 4 : array2[index] === "" ? 0 : -1
+  })
+  let score = pointArray.reduce((prev, curr) => {return prev + curr}, 0)
+  return score > 0 ? score : 0
+ }
