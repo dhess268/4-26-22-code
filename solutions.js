@@ -383,3 +383,8 @@ function towerBuilder(nFloors) {
   }
   return tower;
 }
+
+function century(year) {
+  // Finish this :)
+  return Math.floor((year - 1) / 100) + 1
+}
