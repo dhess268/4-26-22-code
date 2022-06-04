@@ -388,3 +388,12 @@ function century(year) {
   // Finish this :)
   return Math.floor((year - 1) / 100) + 1
 }
+
+
+function game(n) {
+  var result = n * n;
+  if (result % 2 == 0){
+    return [result / 2];
+  }
+  return [result, 2];
+}
