@@ -402,3 +402,11 @@ function game(n) {
 function feast(beast, dish) {
   return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
 }
+
+function sumOfDifferences(arr) {
+  if(!arr.length){
+    return 0
+  }
+  let sortedArr = arr.sort((a,b) => b - a)
+  return sortedArr[0] - sortedArr[sortedArr.length - 1]
+}
