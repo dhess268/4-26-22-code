@@ -410,3 +410,12 @@ function sumOfDifferences(arr) {
   let sortedArr = arr.sort((a,b) => b - a)
   return sortedArr[0] - sortedArr[sortedArr.length - 1]
 }
+
+function chain(input, fs) {
+  // implement the "chain" function
+    let result = input
+    for(let func of fs){
+      result = func(result)
+    }
+    return result
+  }
