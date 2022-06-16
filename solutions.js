@@ -419,3 +419,21 @@ function chain(input, fs) {
     }
     return result
   }
+
+
+  function twoSum(numbers, target) {
+    let num1, num2;
+    for(let i = 0; i < numbers.length - 1; i++){
+      let currNum = numbers[i];
+      for(let j = 0; j < numbers.length; j++){
+        if(currNum + numbers[j] === target && i !==j){
+          num1 = i
+          num2 = j
+  //         console.log(num1, num2)
+        }
+      }
+      
+      
+    }
+    return [num1, num2]
+  }
