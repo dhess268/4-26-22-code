@@ -437,3 +437,35 @@ function chain(input, fs) {
     }
     return [num1, num2]
   }
+
+
+
+  // works for any n < 46 because this method fails for large numbers
+  function countOddPentaFib(n) {
+    let fibArr = []
+    for(let i = 0; i < n; i++){
+      if(i === 0){
+        fibArr.push(0)
+      }
+      else if(i === 1 || i === 2){
+        fibArr.push(1)
+      }
+      else{
+          fibArr.push(fibArr.slice(-5).reduce((inc, curr) => {
+            return inc + curr
+          }, 0))
+        }
+        
+      }
+    
+  //   console.log(fibArr.length, "length")
+    let oddNum = 1
+    fibArr.forEach( (elem) => {
+  //     console.log(elem % 2, elem)
+      if(elem % 2 === 1 && elem !== 1){
+        oddNum +=1
+      }
+    })
+  //   console.log('end')
+    return oddNum
+  }
