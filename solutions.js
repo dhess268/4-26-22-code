@@ -469,3 +469,27 @@ function chain(input, fs) {
   //   console.log('end')
     return oddNum
   }
+
+
+  function twiceAsOld(dadYearsOld, sonYearsOld) {
+  
+    let dadCurrAge = dadYearsOld - sonYearsOld, sonCurrAge = 0
+    
+    if(dadYearsOld / 2 > sonYearsOld){
+      while(dadCurrAge / sonCurrAge !== 2){
+        dadCurrAge ++
+        sonCurrAge ++
+      }
+      return dadCurrAge - dadYearsOld
+    }
+    else if(dadYearsOld / 2 < sonYearsOld){
+      while(dadCurrAge / sonCurrAge !== 2){
+        dadCurrAge ++
+        sonCurrAge ++
+      }
+      return  dadYearsOld - dadCurrAge
+    }
+    else{
+      return 0
+    }
+  }
