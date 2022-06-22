@@ -506,3 +506,18 @@ function chain(input, fs) {
         return dirs;
       }, []);
   }
+
+
+  function warnTheSheep(queue) {
+  
+    let reversedQueue = queue.reverse()
+    let sheepNum = queue.indexOf('wolf')
+    
+    return sheepNum === 0 ? "Pls go away and stop eating my sheep" : `Oi! Sheep number ${sheepNum}! You are about to be eaten by a wolf!`
+  }
+
+
+  const quarterOf = (month) => {
+    return month > 9 ? 4 : month > 6 ? 3 : month > 3 ? 2 : 1
+    
+  }
