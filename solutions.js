@@ -521,3 +521,8 @@ function chain(input, fs) {
     return month > 9 ? 4 : month > 6 ? 3 : month > 3 ? 2 : 1
     
   }
+
+
+  function quadratic(x1, x2){
+    return [1, -(x2 + x1), (x1 * x2)]
+ }
