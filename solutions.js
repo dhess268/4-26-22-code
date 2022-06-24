@@ -526,3 +526,10 @@ function chain(input, fs) {
   function quadratic(x1, x2){
     return [1, -(x2 + x1), (x1 * x2)]
  }
+
+ function filter_list(l) {
+  // Return a new array with the strings filtered out
+  return l.filter(elem => {
+    return typeof(elem) !== "string"
+  })
+}
