@@ -533,3 +533,9 @@ function chain(input, fs) {
     return typeof(elem) !== "string"
   })
 }
+
+function time(distance,boatSpeed,stream){
+  const [dir, delta] = stream.split(' ');
+  const speed = boatSpeed + ((dir[0] === 'U') ? -delta : +delta);
+  return Math.round((distance / speed) * 100.0)/100.0;
+}
