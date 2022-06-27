@@ -539,3 +539,18 @@ function time(distance,boatSpeed,stream){
   const speed = boatSpeed + ((dir[0] === 'U') ? -delta : +delta);
   return Math.round((distance / speed) * 100.0)/100.0;
 }
+
+
+function solveProduct(array) {
+  let prev = 0
+  let next = 0
+  let product = 0
+  for(let i = 0; i < array.length - 1; i++){
+    prev = array[i]
+    next = array[i+1]
+    if(product < prex * next){
+      product = prev * next
+    }
+  }
+ return product
+}
