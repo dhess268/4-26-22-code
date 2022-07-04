@@ -554,3 +554,20 @@ function solveProduct(array) {
   }
  return product
 }
+
+function isIsogram(str){
+  let strArr = str.toLowerCase().split('')
+  const letters = []
+  for(let i = 0; i < strArr.length; i++){
+    for(let j = 0; j < letters.length; j++){
+      if(letters[j] === strArr[i]){
+        return false
+      }
+    }
+    letters.push(strArr[i])
+  }
+  return true
+
+  
+  
+}
