@@ -571,3 +571,35 @@ function isIsogram(str){
   
   
 }
+
+// Imagine that you have been assigned to write a program for a school that needs to determine which test was the hardest for the students. Your program should be able to take an object as an argument that has a list of students with their respective list of grades. The output of the program should be able to clearly tell the user which test was the hardest (lowest class average).
+
+let grades = {
+  April: [88, 56, 55, 97, 100, 88, 100, 98],
+  Tammy1: [78, 46, 92, 84, 55, 74, 89, 80],
+  Ben: [77, 59, 89, 47, 57, 83, 90, 89],
+  Garry: [54, 90, 84, 88, 39, 73, 67, 79],
+  Tammy2: [86, 49, 90, 77, 89, 92, 88, 75]
+}
+
+function getHardestExam(grade){
+  let gradesArray = Object.values(grade)
+  console.log(gradesArray)
+  let lowestGrade = Infinity
+  let index = 0
+  for(let i = 0; i < gradesArray[0].length; i++){
+    let avScore = 0
+    for(let j = 0; j < gradesArray.length; j++){
+      avScore += gradesArray[j][i]
+  
+      }
+    avScore = avScore / gradesArray[0].length
+    if(avScore < lowestGrade){
+      index = i+1
+      lowestGrade = avScore
+     }
+  }
+  return index
+}
+
+console.log(getHardestExam(grades))
