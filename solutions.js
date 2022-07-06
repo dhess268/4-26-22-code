@@ -603,3 +603,20 @@ function getHardestExam(grade){
 }
 
 console.log(getHardestExam(grades))
+
+
+// Write some JavaScript to create a new array based on the overlapping items and the number of times the overlap occurs. For example, our new array would look like this:
+
+
+let arr1 = ['a', 'b', 'c', 'a', 'a', 'b','=', 'd'];
+let arr2 = ['a', 'b', 'b','=', 'a', 'e', 'c', 'c', 'g'];
+
+
+
+let arrIntersect = arr1.filter(elem => arr2.includes(elem))
+let interSet = new Set(arrIntersect)
+let ansStr = ''
+for (const item of interSet) {
+  ansStr += item.repeat(Math.min(arr1.filter(elem => elem === item).length, arr2.filter(elem => elem === item).length))
+}
+console.log(ansStr.split(''))
